@@ -13,12 +13,26 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
-import { AyaxService } from './ayax.service'
+import { AyaxService } from './ayax.service';
+import { SubrayarDirective } from './subrayar.directive'
+import { RouterModule, Routes } from '@angular/router';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { MayusculaPipe } from './mayuscula.pipe';
+
+const routes: Routes = [
+  { path: 'noticias', component: NoticiasComponent },
+  { path: '', component: BienvenidaComponent},
+  { path: 'inicio', component: BienvenidaComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     Nav2Component,
+    SubrayarDirective,
+    BienvenidaComponent,
+    MayusculaPipe,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +46,8 @@ import { AyaxService } from './ayax.service'
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [AyaxService],
   bootstrap: [AppComponent]
