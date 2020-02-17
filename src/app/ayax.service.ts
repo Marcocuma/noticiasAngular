@@ -5,12 +5,16 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AyaxService {
-  users = null
+  news = null
   constructor(public http:HttpClient) { 
-    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe(
+    this.http.get('https://newsapi.org/v2/everything?languaje=es&domains=elpais.com,elmundo.es,elcortodigital.es,ideal.es&page=1&apiKey=e859accb681646698b5ba6f1e8b23ba8').subscribe(
       resultado => {
-        this.users=resultado
+        this.news=resultado
       }
     )
   }
+  getNews(){
+    return this.news.articles;
+  }
+  
 }

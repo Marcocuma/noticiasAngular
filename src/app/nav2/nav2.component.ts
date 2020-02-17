@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { AyaxService } from '../ayax.service';
+
 
 @Component({
   selector: 'app-nav2',
@@ -20,9 +20,8 @@ export class Nav2Component {
       shareReplay()
     );
 
-  constructor(public serv:AyaxService ,private breakpointObserver: BreakpointObserver) {}
+  constructor( private breakpointObserver: BreakpointObserver) {}
   boton(): void{
-    console.log(this.serv.users)
     this.evento.emit("Le has dao al boton")
   }
 }

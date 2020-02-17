@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Tinos&display=swap');
+  .noticias {
+    font-family: 'Tinos', serif;
+  }
+  .carousel-inner{
+      height: 40vw ;
+  }
+  .carousel-item img,.carousel-item{
+      height: 100%;
+      width: 100%;
+  }
+  .carousel-caption{
+    background-color: rgba(128, 128, 128, 0.596);
+  }
+  .carousel-caption p{
+    font-size: 0.7em;
+  }
+  .carousel-control-next:hover{
+    background: rgb(200,200,200);
+    background: linear-gradient(90deg, rgba(200,200,200,0) 0%, rgba(190,190,190,0.5) 100%);
+  }
+  .carousel-control-prev:hover{
+    background: rgb(200,200,200);
+    background: linear-gradient(90deg, rgba(200,200,200,0.5) 0%, rgba(190,190,190,0) 100%);
+  }

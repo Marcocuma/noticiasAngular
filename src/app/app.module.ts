@@ -19,7 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { MayusculaPipe } from './mayuscula.pipe';
-
+import { CommonModule } from '@angular/common';
 const routes: Routes = [
   { path: 'noticias', component: NoticiasComponent },
   { path: '', component: BienvenidaComponent},
@@ -46,6 +46,7 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    CommonModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
   ],
