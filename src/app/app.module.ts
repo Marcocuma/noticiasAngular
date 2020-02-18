@@ -16,12 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AyaxService } from './ayax.service';
 import { SubrayarDirective } from './subrayar.directive'
 import { RouterModule, Routes } from '@angular/router';
-import { NoticiasComponent } from './noticias/noticias.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { MayusculaPipe } from './mayuscula.pipe';
 import { CommonModule } from '@angular/common';
 const routes: Routes = [
-  { path: 'noticias', component: NoticiasComponent },
   { path: '', component: BienvenidaComponent},
   { path: 'inicio', component: BienvenidaComponent}
 ];

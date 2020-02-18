@@ -1,4 +1,39 @@
-<p>{{'bienvenida works!' | mayuscula}}</p>
-<ul>
-    <li *ngFor="let l of lista"> {{l}}</li>
-</ul>
+<section class="noticias p-2">
+    <h1 class="text-center">Noticias</h1>
+    <div id="carouselId" class="carousel slide m-md-3" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselId" data-slide-to="1"></li>
+            <li data-target="#carouselId" data-slide-to="2"></li>
+            <li data-target="#carouselId" data-slide-to="3"></li>
+            <li data-target="#carouselId" data-slide-to="4"></li>
+            <li data-target="#carouselId" data-slide-to="5"></li>
+            <li data-target="#carouselId" data-slide-to="6"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item" [class]="( i == 0 ? 'active' : '' )" *ngFor="let contenido of importantes; index as i">
+           <img [src]="contenido.urlToImage" alt="First slide"> 
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>{{ contenido.title }}</h5>
+                  <p>{{ contenido.description }}</p>
+                  <a name="readMore" id="leerMas" target="_blank" class="btn btn-primary" [href]='contenido.url' role="button">Leer más</a> 
+                </div> 
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="row m-0">
+      <label for="filtro" class="m-0 col-12 col-md-2">Filtro: </label>
+      <input id="filtro" class="col-12 col-md-10"  placeholder="Pulsa intro para filtrar"/>
+    </div>
+    <div class="row m-0">
+       <!-- <noticia v-for="let contenido in noticias" :key='contenido.url' :contenido='contenido' :clases='"card col-12 col-md-6 col-lg-4 col-xl-3 p-0 mt-3"'></noticia> -->
+    </div>
+  </section>

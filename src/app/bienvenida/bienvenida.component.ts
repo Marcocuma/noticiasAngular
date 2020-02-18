@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AyaxService } from '../ayax.service';
 
 @Component({
   selector: 'app-bienvenida',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bienvenida.component.css']
 })
 export class BienvenidaComponent implements OnInit {
-  lista = [1,2,3,4]
-  constructor() { }
+  importantes = []
+  noticias = []
+  constructor(public serv:AyaxService) { 
+    this.importantes = this.serv.getNews().slice(0,7)
+    this.noticias =  this.serv.getNews().slice(7, this.serv.getNews().length-1)
+    console.log(this.importantes)
+  }
 
   ngOnInit(): void {
+    
   }
 
 }
