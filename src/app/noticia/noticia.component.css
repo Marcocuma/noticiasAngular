@@ -1,0 +1,27 @@
+.noticia {
+
+}
+.card-img-top{
+  height: 16em;
+}
+.card-body{
+  /*-webkit-box-shadow: 1px -24px 24px -8px rgba(0,0,0,0.60);
+-moz-box-shadow: 1px -24px 24px -8px rgba(0,0,0,0.60);
+box-shadow: 1px -24px 24px -8px rgba(0,0,0,0.60);*/
+height: 16em;
+}
+#divImg{
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+  height: 16em;
+}
+#divImg:hover{
+  transition: 0.5s;
+  -webkit-box-shadow: inset 10px 10px 70px 47px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 10px 10px 70px 47px rgba(0,0,0,0.75);
+  box-shadow: inset 10px 10px 70px 47px rgba(0,0,0,0.75);
+}

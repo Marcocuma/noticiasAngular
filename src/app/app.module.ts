@@ -19,6 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { MayusculaPipe } from './mayuscula.pipe';
 import { CommonModule } from '@angular/common';
+import { NoticiaComponent } from './noticia/noticia.component';
 const routes: Routes = [
   { path: '', component: BienvenidaComponent},
   { path: 'inicio', component: BienvenidaComponent}
@@ -31,6 +32,7 @@ const routes: Routes = [
     SubrayarDirective,
     BienvenidaComponent,
     MayusculaPipe,
+    NoticiaComponent,
   ],
   imports: [
     BrowserModule,

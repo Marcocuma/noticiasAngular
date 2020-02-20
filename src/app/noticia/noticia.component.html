@@ -1,0 +1,12 @@
+<div >
+    <div id="divImg"></div>
+    <img class="card-img-top" [src]="content.urlToImage" alt="">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">{{ content.publishedAt.replace('T',' ').replace('Z',' ')}} - {{ content.author }}</h6>
+      <h4 class="card-title">{{ content.title }}</h4>
+      <p class="card-text">{{ content.content.slice(0,100)+"..." }}</p>
+    </div>
+    <div class="card-footer">
+      <a name="readMore" id="leerMas" class="btn btn-primary" [href]='content.url' target="_blank" role="button">Leer más</a>
+    </div>
+  </div>
