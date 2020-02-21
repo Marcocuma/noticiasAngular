@@ -32,9 +32,9 @@
     <div class="row m-0">
       <label for="filtro" class="m-0 col-12 col-md-2">Filtro: </label>
       <input id="filtro" class="col-12 col-md-9"  [(ngModel)]="valorFiltro"  placeholder="Pulsa intro para filtrar"/>
-      <button (click)="filtrar()">Filtrar</button> {{valorFiltro}}
+      <button (click)="filtrar()">Filtrar</button>
     </div>
     <div class="row m-0" >
-       <app-noticia *ngFor="let contenido of noticias | async" [content]='contenido' class='card col-12 col-md-6 col-lg-4 col-xl-3 p-0 mt-3'></app-noticia>
+       <app-noticia *ngFor="let contenido of noticias" [content]='contenido' class='card col-12 col-md-6 col-lg-4 col-xl-3 p-0 mt-3'></app-noticia>
     </div>
   </section>

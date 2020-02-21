@@ -1,6 +1,6 @@
 <div >
     <div id="divImg"></div>
-    <img class="card-img-top" [src]="content.urlToImage" alt="">
+    <img class="card-img-top" [src]="(content.urlToImage == null ? 'https://geodis.com/sites/default/files/2018-06/404.png' : content.urlToImage)" alt="">
     <div class="card-body">
       <h6 class="card-subtitle mb-2 text-muted">{{ content.publishedAt.replace('T',' ').replace('Z',' ')}} - {{ content.author }}</h6>
       <h4 class="card-title">{{ content.title }}</h4>
