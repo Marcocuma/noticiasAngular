@@ -20,7 +20,8 @@ export class BienvenidaComponent implements OnInit {
   ngOnInit(): void {
   }
   filtrar(){
+    this.serv.title = this.valorFiltro
+    console.log('Filtro'+this.valorFiltro)
     this.noticias=this.serv.getFiltrada(this.valorFiltro)
-    console.log(this.noticias)
   }
 }
