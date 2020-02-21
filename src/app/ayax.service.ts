@@ -9,14 +9,14 @@ export class AyaxService {
   page = 1;
   title = '';
   constructor(public http:HttpClient) {
-    
-  }
-  getNews(){
     this.http.get('https://newsapi.org/v2/everything?languaje=es&domains=elpais.com,elmundo.es,elcortodigital.es,ideal.es&page=1&apiKey=e859accb681646698b5ba6f1e8b23ba8').subscribe(
       resultado => {
         this.news = resultado
       }
     )
+  }
+  getNews(){
+    
     if(this.news != null)
       return this.news.articles;
     return null;

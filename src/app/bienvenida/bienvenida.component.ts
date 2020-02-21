@@ -11,8 +11,8 @@ export class BienvenidaComponent implements OnInit {
   noticias = []
   valorFiltro = ''
   constructor(public serv:AyaxService) { 
-    this.importantes = this.serv.getNews().slice(0,7)
-    this.noticias =  this.serv.getNews().slice(7, this.serv.getNews().length-1)
+    this.importantes = this.serv.news.slice(0,7)
+    this.noticias =  this.serv.news.slice(7, this.serv.news.length-1)
     console.log(this.importantes)
     console.log(this.noticias)
   }
